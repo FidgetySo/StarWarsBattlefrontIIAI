@@ -196,6 +196,7 @@ class StarWars_v0(gym.Env):
                 self.is_moving = True
         elif choice_move == 1:
             keyboard.press("4")
+            time.sleep(0.005)
             keyboard.release("4")
 
     def reset(self):
