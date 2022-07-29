@@ -68,7 +68,7 @@ class Entity:
 
 class StarWars_v0(gym.Env):
     def __init__(self):
-        self.action_space = spaces.MultiDiscrete((4, 3))
+        self.action_space = spaces.MultiDiscrete((3, 3))
         self.observation_space = spaces.Box(low=0, high=255, shape=(90, 160, 3), dtype=np.uint8)
         
         self.render_view = read_int(mem, read_int(mem, Offsets.GameRenderer) + Offsets.RenderView)
